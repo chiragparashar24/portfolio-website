@@ -1,4 +1,4 @@
-// Smooth scroll animation
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Scroll reveal animation
+// Scroll animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -18,19 +18,33 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Active nav highlight
-window.addEventListener('scroll', () => {
-    let current = '';
-    document.querySelectorAll('section').forEach(section => {
-        if (scrollY >= section.offsetTop - 200) {
-            current = section.id;
-        }
+// Resume Modal
+const openResume = document.getElementById("openResume");
+const closeResume = document.getElementById("closeResume");
+const resumeModal = document.getElementById("resumeModal");
+
+openResume.onclick = () => resumeModal.classList.add("show");
+closeResume.onclick = () => resumeModal.classList.remove("show");
+
+// Contact Form AJAX + Success Modal
+const form = document.getElementById("contactForm");
+const successModal = document.getElementById("successModal");
+const closeSuccess = document.getElementById("closeSuccess");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
     });
 
-    document.querySelectorAll('nav a').forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === `#${current}`) {
-            a.classList.add('active');
-        }
-    });
+    if (response.ok) {
+        form.reset();
+        successModal.classList.add("show");
+    }
 });
+
+closeSuccess.onclick = () => successModal.classList.remove("show");
