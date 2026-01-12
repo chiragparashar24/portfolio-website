@@ -1,4 +1,4 @@
-// Smooth scroll
+// ---------- Smooth scroll ----------
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Scroll animation
+// ---------- Scroll animations ----------
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -18,33 +18,53 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Resume Modal
-const openResume = document.getElementById("openResume");
-const closeResume = document.getElementById("closeResume");
-const resumeModal = document.getElementById("resumeModal");
+// ---------- MODAL CONTROL ----------
+function closeAllModals() {
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.classList.remove("show");
+    });
+}
 
-openResume.onclick = () => resumeModal.classList.add("show");
-closeResume.onclick = () => resumeModal.classList.remove("show");
+// Open Resume Modal
+document.getElementById("openResume").addEventListener("click", () => {
+    closeAllModals();
+    document.getElementById("resumeModal").classList.add("show");
+});
 
-// Contact Form AJAX + Success Modal
+// Close buttons
+document.querySelectorAll(".close-modal").forEach(btn => {
+    btn.addEventListener("click", closeAllModals);
+});
+
+// Close modal on background click
+document.querySelectorAll(".modal").forEach(modal => {
+    modal.addEventListener("click", e => {
+        if (e.target === modal) closeAllModals();
+    });
+});
+
+// ---------- CONTACT FORM ----------
 const form = document.getElementById("contactForm");
-const successModal = document.getElementById("successModal");
-const closeSuccess = document.getElementById("closeSuccess");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-    });
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-    if (response.ok) {
-        form.reset();
-        successModal.classList.add("show");
+        if (response.ok) {
+            form.reset();
+            closeAllModals();
+            document.getElementById("successModal").classList.add("show");
+        } else {
+            alert("Submission failed. Please try again.");
+        }
+    } catch {
+        alert("Network error. Please try again.");
     }
 });
-
-closeSuccess.onclick = () => successModal.classList.remove("show");
