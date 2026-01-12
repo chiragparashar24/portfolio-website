@@ -142,33 +142,35 @@
         <h2>Contact Me</h2>
 
         <div class="contact-container">
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <!-- REQUIRED: Web3Forms Access Key -->
+            <<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- REQUIRED -->
                 <input type="hidden" name="access_key" value="d487ed1b-0ec8-4922-ab63-8bc6304dc1b9">
 
-                <!-- Optional but Recommended -->
-                <input type="hidden" name="subject" value="New Contact Form Submission">
-                <input type="hidden" name="from_name" value="Portfolio Contact">
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <!-- Optional -->
+                <input type="hidden" name="subject" value="New Portfolio Contact">
+                <input type="hidden" name="from_name" value="Chirag Portfolio">
+                <input type="checkbox" name="botcheck" style="display:none">
 
-                <!-- Form Fields -->
+                <!-- Fields -->
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
                 <button type="submit">Send Message</button>
+                </form>
+
                 <input type="hidden" name="redirect"
                     value="https://chiragparashar24.github.io/portfolio/thankyou.html" />
 
-            </form>
+                </form>
 
 
-            <div class="contact-links">
-                <a href="mailto:chiragparashar1812@gmail.com">📧 Email</a>
-                <a href="https://linkedin.com/in/chiragparashar9665" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/chiragparashar24" target="_blank">💻 GitHub</a>
-                <a href="tel:+919829045996">📱 Phone</a>
-            </div>
+                <div class="contact-links">
+                    <a href="mailto:chiragparashar1812@gmail.com">📧 Email</a>
+                    <a href="https://linkedin.com/in/chiragparashar9665" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/chiragparashar24" target="_blank">💻 GitHub</a>
+                    <a href="tel:+919829045996">📱 Phone</a>
+                </div>
         </div>
     </section>
 
