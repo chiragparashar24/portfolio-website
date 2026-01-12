@@ -134,29 +134,27 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="fade-in">
+    <section id="contact" class="fade-in contact-section">
         <h2>Contact Me</h2>
 
-        <form action="https://formspree.io/f/mzddbeba" method="POST">
-            <label for="name">Name</label>
-            <input id="name" type="text" name="name" required />
+        <div class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/mzddbeba" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" required />
+                <button type="submit">Send Message</button>
+            </form>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="contact-links">
-            <a href="mailto:chiragparashar1812@gmail.com">📧 Email</a>
-            <a href="https://linkedin.com/in/chiragparashar9665" target="_blank">💼 LinkedIn</a>
-            <a href="https://github.com/chiragparashar24" target="_blank">💻 GitHub</a>
-            <a href="tel:+919829045996">📱 Phone</a>
+            <div class="contact-links">
+                <a href="mailto:chiragparashar1812@gmail.com">📧 Email</a>
+                <a href="https://linkedin.com/in/chiragparashar9665" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/chiragparashar24" target="_blank">💻 GitHub</a>
+                <a href="tel:+919829045996">📱 Phone</a>
+            </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>

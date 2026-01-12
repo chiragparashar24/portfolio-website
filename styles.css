@@ -528,3 +528,78 @@ footer p {
         min-width: 100%;
     }
 }
+
+/* =========================
+   PROFESSIONAL CONTACT SECTION
+   ========================= */
+
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 720px;
+    margin: 40px auto 0;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #7c7cff, #5a5ae0);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.contact-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #7c7cff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
