@@ -1,69 +1,36 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scroll animation
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        document.querySelector(link.getAttribute('href'))
+            .scrollIntoView({ behavior: 'smooth' });
     });
 });
 
-// Scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+// Scroll reveal animation
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, observerOptions);
+}, { threshold: 0.15 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Active navigation link highlighting
+// Active nav highlight
 window.addEventListener('scroll', () => {
     let current = '';
-    const sections = document.querySelectorAll('section');
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
+    document.querySelectorAll('section').forEach(section => {
+        if (scrollY >= section.offsetTop - 200) {
+            current = section.id;
         }
     });
 
-    document.querySelectorAll('nav a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
+    document.querySelectorAll('nav a').forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === `#${current}`) {
+            a.classList.add('active');
         }
     });
 });
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease-in';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Prevent default form submission if you add a contact form later
-const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // Add your form handling logic here
-    console.log('Form submitted');
-};
