@@ -7,7 +7,7 @@
     <title>Chirag Parashar | AI/ML Developer</title>
 
     <meta name="description"
-        content="Chirag Parashar – AI/ML Developer with 8.90 CGPA, skilled in Python, Flask, Deep Learning, and Full-Stack Development." />
+        content="Chirag Parashar – AI/ML Developer with 8.90 CGPA, skilled in Python, Flask, Deep Learning and Full-Stack Development." />
 
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -35,12 +35,12 @@
 
             <p class="description">
                 Computer Science (AI & ML) student with a <strong>CGPA of 8.90</strong>.
-                Passionate about building intelligent systems, scalable web apps, and production-ready solutions.
+                Experienced in building AI-powered applications and scalable web systems.
             </p>
 
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                <a href="#" class="btn btn-secondary" id="openResume">Download CV</a>
             </div>
         </div>
     </section>
@@ -51,26 +51,20 @@
 
         <div class="experience-grid">
             <div class="experience-card">
-                <div class="experience-header">
-                    <span class="experience-title">Python Intern</span>
-                    <span class="experience-date">Jan 2026 – Present</span>
-                </div>
-                <div class="experience-company">Vertex Development · Remote</div>
+                <h3>Python Programming Intern</h3>
+                <span>Vertex Development · Remote</span>
                 <p>
-                    Built REST APIs using Flask, handled backend logic, tested endpoints,
-                    and improved performance and reliability.
+                    Built and tested Flask-based backend applications and REST APIs.
+                    Improved reliability and performance through structured API testing.
                 </p>
             </div>
 
             <div class="experience-card">
-                <div class="experience-header">
-                    <span class="experience-title">Front-End Intern</span>
-                    <span class="experience-date">Jan 2026 – Present</span>
-                </div>
-                <div class="experience-company">SaiKet Systems · Remote</div>
+                <h3>Front-End Developer Intern</h3>
+                <span>SaiKet Systems · Remote</span>
                 <p>
-                    Designed responsive UI using HTML, CSS, JavaScript & Bootstrap.
-                    Improved UX and optimized load times.
+                    Developed responsive interfaces using HTML, CSS, JavaScript and Bootstrap.
+                    Focused on UX, optimization and cross-browser compatibility.
                 </p>
             </div>
         </div>
@@ -82,20 +76,19 @@
 
         <div class="projects-grid">
             <div class="project-card">
-                <h3 class="project-title">Multi-Language Translator</h3>
+                <h3>Multi-Language Translation App</h3>
                 <p>
-                    Flask-based translation platform deployed on Render with real-time multilingual support.
+                    Production-ready Flask application deployed on Render with real-time
+                    multi-language translation support.
                 </p>
-                <div class="project-tags">Python · Flask · APIs · HTML/CSS</div>
             </div>
 
             <div class="project-card">
-                <h3 class="project-title">Facial Attribute Detection</h3>
+                <h3>Facial Attribute Detection System</h3>
                 <p>
-                    Deep learning system for age & gender detection using DeepFace and OpenCV
-                    achieving ~85% accuracy.
+                    Deep learning application using DeepFace and OpenCV achieving
+                    80–85% accuracy for age and gender detection.
                 </p>
-                <div class="project-tags">Deep Learning · OpenCV · Python</div>
             </div>
         </div>
     </section>
@@ -107,32 +100,17 @@
         <div class="skills-grid">
             <div class="skill-category">
                 <h3>Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">JavaScript</span>
-                </div>
+                <p>Python, C, C++, JavaScript</p>
             </div>
 
             <div class="skill-category">
-                <h3>Web & Tools</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">MySQL</span>
-                </div>
+                <h3>Web & Backend</h3>
+                <p>HTML, CSS, Bootstrap, Flask, MySQL</p>
             </div>
 
             <div class="skill-category">
                 <h3>Specialization</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">AI / ML</span>
-                    <span class="skill-tag">DSA</span>
-                    <span class="skill-tag">Cybersecurity</span>
-                </div>
+                <p>AI/ML, DSA, Cybersecurity</p>
             </div>
         </div>
     </section>
@@ -140,13 +118,12 @@
     <!-- CERTIFICATIONS -->
     <section id="certifications" class="fade-in">
         <h2>Certifications</h2>
-
-        <div class="cert-grid">
-            <div class="cert-item">Google Cybersecurity Professional</div>
-            <div class="cert-item">Red Hat System Administration</div>
-            <div class="cert-item">Oracle MySQL Explorer</div>
-            <div class="cert-item">Deloitte Cyber Job Simulation</div>
-        </div>
+        <ul class="cert-list">
+            <li>Red Hat System Administration I (RH124)</li>
+            <li>Google Cybersecurity Professional Certificate</li>
+            <li>MySQL Explorer – Oracle</li>
+            <li>Deloitte Cyber Job Simulation</li>
+        </ul>
     </section>
 
     <!-- CONTACT -->
@@ -154,11 +131,11 @@
         <h2>Contact Me</h2>
 
         <div class="contact-container">
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="d487ed1b-0ec8-4922-ab63-8bc6304dc1b9">
+            <form class="contact-form" id="contactForm">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
 
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
                 <button type="submit">Send Message</button>
@@ -171,6 +148,25 @@
             </div>
         </div>
     </section>
+
+    <!-- RESUME MODAL -->
+    <div class="modal" id="resumeModal">
+        <div class="modal-content">
+            <h3>Download Resume</h3>
+            <p>Latest updated resume (PDF)</p>
+            <a href="resume.pdf" download class="btn btn-primary">Download PDF</a>
+            <button class="btn btn-secondary" id="closeResume">Close</button>
+        </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h3>Thank You! 🎉</h3>
+            <p>Your message has been sent successfully.<br>I’ll get back to you soon.</p>
+            <button class="btn btn-primary" id="closeSuccess">Close</button>
+        </div>
+    </div>
 
     <footer>
         <p>© 2026 Chirag Parashar</p>
