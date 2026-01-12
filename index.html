@@ -142,13 +142,26 @@
         <h2>Contact Me</h2>
 
         <div class="contact-container">
-            <form class="contact-form" action="https://formspree.io/f/mzddbeba" method="POST">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- REQUIRED: Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="d487ed1b-0ec8-4922-ab63-8bc6304dc1b9">
+
+                <!-- Optional but Recommended -->
+                <input type="hidden" name="subject" value="New Contact Form Submission">
+                <input type="hidden" name="from_name" value="Portfolio Contact">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <!-- Form Fields -->
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
                 <button type="submit">Send Message</button>
+                <input type="hidden" name="redirect"
+                    value="https://chiragparashar24.github.io/portfolio/thankyou.html" />
+
             </form>
+
 
             <div class="contact-links">
                 <a href="mailto:chiragparashar1812@gmail.com">📧 Email</a>
