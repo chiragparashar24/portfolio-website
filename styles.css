@@ -603,3 +603,9 @@ footer p {
 .contact-links a:hover {
     text-decoration: underline;
 }
+
+
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+}
