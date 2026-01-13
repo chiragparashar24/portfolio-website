@@ -364,3 +364,26 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+
+/* ===== CONTACT LINKS VISIBILITY FIX ===== */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    margin-bottom: 2rem;
+}
+
+.contact-form button {
+    margin-top: 0.5rem;
+}
+
+.contact-links {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+}
