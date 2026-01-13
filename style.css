@@ -387,3 +387,33 @@ footer {
     visibility: visible !important;
     max-height: none !important;
 }
+
+
+/* ===== FORCE CONTACT LINKS VISIBILITY ===== */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
