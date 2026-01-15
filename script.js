@@ -1,19 +1,16 @@
 // =======================================
-// Smooth scroll + animation re-trigger
+// Smooth scroll
 // =======================================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", e => {
         e.preventDefault();
-
-        const target = document.querySelector(link.getAttribute("href"));
-        if (!target) return;
-
-        target.scrollIntoView({ behavior: "smooth" });
+        document.querySelector(link.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
     });
 });
 
 // =======================================
-// Scroll-based fade-in animations
+// Fade-in animations
 // =======================================
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -26,24 +23,25 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
 // =======================================
-// Thank You popup (NO network logic here)
+// Show Thank You popup after redirect
 // =======================================
-const form = document.getElementById("contactForm");
+const params = new URLSearchParams(window.location.search);
 const modal = document.getElementById("thankYouModal");
 
-if (form) {
-    form.addEventListener("submit", () => {
-        setTimeout(() => {
-            form.reset();
-            modal.classList.add("show");
-        }, 400);
-    });
+if (params.get("success") === "true" && modal) {
+    modal.classList.add("show");
+
+    // Clean URL (remove ?success=true)
+    window.history.replaceState({}, document.title, window.location.pathname);
 }
 
+// =======================================
+// Modal close
+// =======================================
 document.querySelectorAll(".close-modal").forEach(btn => {
     btn.addEventListener("click", () => modal.classList.remove("show"));
 });
 
-modal.addEventListener("click", e => {
+modal?.addEventListener("click", e => {
     if (e.target === modal) modal.classList.remove("show");
 });
