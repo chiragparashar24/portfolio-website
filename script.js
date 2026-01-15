@@ -30,7 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // =======================================
-// Default scroll-based fade-in
+// Scroll-based fade-in (default behavior)
 // =======================================
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -43,9 +43,10 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
 // =======================================
-// Contact form submit
+// Contact form submit + Thank You modal
 // =======================================
 const form = document.getElementById("contactForm");
+const thankYouModal = document.getElementById("thankYouModal");
 
 if (form) {
     form.addEventListener("submit", async (e) => {
@@ -60,13 +61,30 @@ if (form) {
             });
 
             if (response.ok) {
-                alert("Message sent successfully!");
                 form.reset();
+                thankYouModal.classList.add("show");
             } else {
-                alert("Submission failed. Try again.");
+                alert("Submission failed. Please try again.");
             }
         } catch {
             alert("Network error. Please try again.");
+        }
+    });
+}
+
+// =======================================
+// Modal close handlers
+// =======================================
+document.querySelectorAll(".close-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+        thankYouModal.classList.remove("show");
+    });
+});
+
+if (thankYouModal) {
+    thankYouModal.addEventListener("click", (e) => {
+        if (e.target === thankYouModal) {
+            thankYouModal.classList.remove("show");
         }
     });
 }

@@ -275,3 +275,54 @@ section.fade-in {
 section.fade-in {
     scroll-margin-top: 90px;
 }
+
+
+
+/* =========================
+   MODAL (THANK YOU POPUP)
+========================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #12121c;
+    padding: 2.5rem;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    border: 1px solid var(--border);
+    animation: scaleIn 0.3s ease;
+}
+
+.modal-content h3 {
+    margin-bottom: 0.6rem;
+}
+
+.modal-content p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
