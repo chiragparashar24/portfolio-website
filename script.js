@@ -43,6 +43,7 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
 // =======================================
+// =======================================
 // Contact form submit + Thank You modal
 // =======================================
 const form = document.getElementById("contactForm");
@@ -55,19 +56,23 @@ if (form) {
         const formData = new FormData(form);
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+            const response = await fetch(form.action, {
                 method: "POST",
                 body: formData
             });
 
-            if (response.ok) {
+            const result = await response.json();
+
+            if (result.success) {
                 form.reset();
                 thankYouModal.classList.add("show");
             } else {
-                alert("Submission failed. Please try again.");
+                alert("Submission failed. Please check form configuration.");
+                console.error(result);
             }
-        } catch {
+        } catch (error) {
             alert("Network error. Please try again.");
+            console.error(error);
         }
     });
 }
