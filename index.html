@@ -114,13 +114,19 @@
     </section>
 
     <!-- CONTACT -->
+    <!-- CONTACT -->
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
 
         <div class="contact-container">
-            <!-- IMPORTANT: Native form submission (NO fetch) -->
             <form id="contactForm" class="contact-form fade-in" action="https://api.web3forms.com/submit" method="POST">
+                <!-- REQUIRED -->
                 <input type="hidden" name="access_key" value="d487ed1b-0ec8-4922-ab63-8bc6304dc1b9">
+
+                <!-- REDIRECT AFTER SUCCESS -->
+                <input type="hidden" name="redirect"
+                    value="https://chiragparashar24.github.io/portfolio-website/?success=true">
+
                 <input type="hidden" name="subject" value="New Portfolio Contact">
                 <input type="hidden" name="from_name" value="Chirag Portfolio">
 
@@ -139,11 +145,6 @@
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>© 2026 Chirag Parashar</p>
-    </footer>
-
     <!-- THANK YOU MODAL -->
     <div class="modal" id="thankYouModal">
         <div class="modal-content">
@@ -152,6 +153,10 @@
             <button class="btn btn-primary close-modal">Close</button>
         </div>
     </div>
+
+    <footer>
+        <p>Made with 🫶🏻 by Chirag Parashar</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
