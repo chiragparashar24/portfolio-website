@@ -1,70 +1,72 @@
-// ---------- Smooth scroll ----------
+// =======================================
+// Smooth scroll + animation re-trigger
+// =======================================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
+    link.addEventListener("click", e => {
         e.preventDefault();
-        document.querySelector(link.getAttribute('href'))
-            .scrollIntoView({ behavior: 'smooth' });
+
+        const target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+
+        // Reset animations inside section
+        target.querySelectorAll(".fade-in").forEach(el => {
+            el.classList.remove("visible");
+        });
+        target.classList.remove("visible");
+
+        target.scrollIntoView({ behavior: "smooth" });
+
+        // Re-trigger with stagger
+        setTimeout(() => {
+            target.classList.add("visible");
+
+            target.querySelectorAll(".fade-in").forEach((el, i) => {
+                setTimeout(() => {
+                    el.classList.add("visible");
+                }, i * 120);
+            });
+        }, 300);
     });
 });
 
-// ---------- Scroll animations ----------
+// =======================================
+// Default scroll-based fade-in
+// =======================================
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
         }
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-// ---------- MODAL CONTROL ----------
-function closeAllModals() {
-    document.querySelectorAll(".modal").forEach(modal => {
-        modal.classList.remove("show");
-    });
-}
-
-// Open Resume Modal
-document.getElementById("openResume").addEventListener("click", () => {
-    closeAllModals();
-    document.getElementById("resumeModal").classList.add("show");
-});
-
-// Close buttons
-document.querySelectorAll(".close-modal").forEach(btn => {
-    btn.addEventListener("click", closeAllModals);
-});
-
-// Close modal on background click
-document.querySelectorAll(".modal").forEach(modal => {
-    modal.addEventListener("click", e => {
-        if (e.target === modal) closeAllModals();
-    });
-});
-
-// ---------- CONTACT FORM ----------
+// =======================================
+// Contact form submit
+// =======================================
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    const formData = new FormData(form);
+        const formData = new FormData(form);
 
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        if (response.ok) {
-            form.reset();
-            closeAllModals();
-            document.getElementById("successModal").classList.add("show");
-        } else {
-            alert("Submission failed. Please try again.");
+            if (response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+            } else {
+                alert("Submission failed. Try again.");
+            }
+        } catch {
+            alert("Network error. Please try again.");
         }
-    } catch {
-        alert("Network error. Please try again.");
-    }
-});
+    });
+}
