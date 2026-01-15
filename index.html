@@ -41,7 +41,7 @@
 
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                <a href="Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
             </div>
         </div>
     </section>
@@ -49,15 +49,13 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="fade-in">
         <h2>Experience</h2>
-
         <div class="experience-grid">
             <div class="experience-card fade-in">
                 <h3>AI Winter Intern</h3>
                 <span>Mirai School of Technology · Remote</span>
                 <p>
                     Selected for an intensive AI internship focused on practical learning.
-                    Worked on real-world AI concepts, model logic, and problem-solving while
-                    collaborating with mentors and peers in an industry-oriented environment.
+                    Worked on real-world AI concepts, model logic, and industry-oriented problem solving.
                 </p>
             </div>
         </div>
@@ -66,21 +64,20 @@
     <!-- PROJECTS -->
     <section id="projects" class="fade-in">
         <h2>Featured Projects</h2>
-
         <div class="projects-grid">
             <div class="project-card fade-in">
                 <h3>Multi-Language Translation Web App</h3>
                 <p>
-                    Flask-based web application supporting real-time multi-language translation.
-                    Designed with a clean UI and deployed on Render for accessibility and performance.
+                    Flask-based application supporting real-time multi-language translation,
+                    deployed on Render with optimized UI and performance.
                 </p>
             </div>
 
             <div class="project-card fade-in">
                 <h3>Facial Attribute Detection System</h3>
                 <p>
-                    Deep learning system using DeepFace and OpenCV to detect facial attributes
-                    with 80–85% accuracy, focusing on model reliability and preprocessing.
+                    Deep learning system using DeepFace & OpenCV achieving 80–85% accuracy
+                    through advanced preprocessing and model tuning.
                 </p>
             </div>
         </div>
@@ -89,18 +86,15 @@
     <!-- SKILLS -->
     <section id="skills" class="fade-in">
         <h2>Skills</h2>
-
         <div class="skills-grid">
             <div class="skill-card fade-in">
                 <h3>Programming</h3>
                 <p>Python, C, C++, JavaScript</p>
             </div>
-
             <div class="skill-card fade-in">
                 <h3>Web & Backend</h3>
                 <p>HTML, CSS, Bootstrap, Flask, MySQL</p>
             </div>
-
             <div class="skill-card fade-in">
                 <h3>Core Focus</h3>
                 <p>Frontend Development, AI/ML, DSA, Cybersecurity</p>
@@ -114,7 +108,7 @@
         <ul class="cert-list">
             <li class="fade-in">Red Hat System Administration I (RH124)</li>
             <li class="fade-in">Google Cybersecurity Professional Certificate</li>
-            <li class="fade-in">MySQL Explorer – Oracle</li>
+            <li class="fade-in">Oracle MySQL Explorer</li>
             <li class="fade-in">Deloitte Cyber Job Simulation</li>
         </ul>
     </section>
@@ -124,9 +118,11 @@
         <h2>Contact Me</h2>
 
         <div class="contact-container">
-            <form class="contact-form fade-in" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-
+            <!-- IMPORTANT: Native form submission (NO fetch) -->
+            <form id="contactForm" class="contact-form fade-in" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="d487ed1b-0ec8-4922-ab63-8bc6304dc1b9">
+                <input type="hidden" name="subject" value="New Portfolio Contact">
+                <input type="hidden" name="from_name" value="Chirag Portfolio">
 
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
@@ -148,18 +144,16 @@
         <p>© 2026 Chirag Parashar</p>
     </footer>
 
+    <!-- THANK YOU MODAL -->
+    <div class="modal" id="thankYouModal">
+        <div class="modal-content">
+            <h3>Thank You! 🙌</h3>
+            <p>Your message has been sent successfully.<br>I’ll get back to you soon.</p>
+            <button class="btn btn-primary close-modal">Close</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-
-<!-- THANK YOU MODAL -->
-<div class="modal" id="thankYouModal">
-    <div class="modal-content">
-        <h3>Thank You! 🙌</h3>
-        <p>Your message has been sent successfully.<br>
-            I’ll get back to you soon.</p>
-        <button class="btn btn-primary close-modal">Close</button>
-    </div>
-</div>
-
 
 </html>
