@@ -200,6 +200,14 @@ h2 {
     border-radius: 999px;
 }
 
+/* Center hCaptcha */
+.h-captcha {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+
 /* FOOTER */
 footer {
     text-align: center;
