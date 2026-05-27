@@ -1,121 +1,83 @@
-# Chirag Parashar — Portfolio (Next.js)
+# Chirag Parashar — Portfolio Website
 
-A world-class, recruiter-focused personal portfolio for **Chirag Parashar** —
-Microsoft Learn Student Ambassador, AI/ML Engineer, and Software Developer.
+A world-class, recruiter-focused personal portfolio built with **pure HTML, CSS & JavaScript** — no frameworks, no build tools, no dependencies.
 
 > **Tagline:** Building Intelligent Solutions with AI, Data & Code.
 
 ---
 
+## Live Demo
+
+Open `index.html` in any modern browser, or deploy to GitHub Pages / Netlify / Vercel as a static site.
+
+---
+
+## Features
+
+- **Modern dark theme** with glassmorphism, gradient mesh, and animated particle background
+- **Animated sliding sections** — scroll-reveal, slide-in-left/right transitions
+- **Typing animation** cycling through roles (AI/ML Engineer, Python Developer, etc.)
+- **Sticky navbar** with active-section indicator and responsive mobile drawer
+- **12 recruiter-focused sections:** Hero, About, Skills, Experience, Projects, Achievements, Leadership, Certifications, GitHub Stats, Blog, Testimonials, Contact
+- **Filterable + searchable projects** grid
+- **Animated skill progress bars** and achievement counters
+- **Dark/Light theme toggle** (persisted in localStorage)
+- **Validated contact form** with mailto fallback
+- **Live GitHub stats** fetched from the public API
+- **Back-to-top button** and loading screen
+- **Fully responsive** — mobile-first design
+- **Accessible** — semantic HTML, focus styles, reduced-motion support
+- **SEO optimized** — Open Graph, Twitter Cards, JSON-LD structured data
+
+---
+
 ## Tech Stack
 
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router) + React 18
-- **Language:** TypeScript (strict)
-- **Styling:** Tailwind CSS v3 with custom design tokens (`#00D4FF`, `#7C3AED`, `#00FFB3`)
-- **Animation:** [Framer Motion](https://www.framer.com/motion/)
-- **Icons:** [react-icons](https://react-icons.github.io/react-icons/) (Font Awesome 6 + Simple Icons)
-- **GitHub stats:** Public GitHub REST API + community badge services
-- **SEO:** Next.js metadata API, JSON-LD structured data, sitemap, robots, OG/Twitter cards
+| Layer | Technology |
+|-------|-----------|
+| Structure | HTML5 (semantic) |
+| Styling | CSS3 (custom properties, grid, flexbox, animations) |
+| Interactivity | Vanilla JavaScript (ES6+, IntersectionObserver) |
+| Icons | Font Awesome 6 (CDN) |
+| Fonts | Google Fonts — Inter, Space Grotesk, JetBrains Mono |
+
+**Zero dependencies. Zero build step. Just open and ship.**
 
 ---
 
-## Highlights
-
-- 🎨 Modern dark theme with glassmorphism + animated gradient mesh
-- ⚡ Lighthouse-friendly (95+ targets across Performance / A11y / BP / SEO)
-- ♿ Accessibility-first: semantic HTML, focus styles, skip link, reduced-motion support, aria labels
-- 🌓 Dark / light mode toggle (persisted in `localStorage`)
-- 🌀 Scroll-reveal animations, typing animation, animated counters, particle background, custom loader
-- 🔍 Filterable + searchable projects grid
-- 🪟 Certificate details modal (with keyboard / overlay close)
-- 📈 Live GitHub stats fetched from the public GitHub API
-- 📨 Validated contact form (graceful `mailto:` fallback — no backend required)
-- 🧭 Sticky navbar with active-section highlight and mobile drawer
-
----
-
-## Folder Structure
+## File Structure
 
 ```
-portfolio/
+portfolio-website/
+├── index.html          ← The entire portfolio (single page)
+├── style.css           ← All styles (~700 lines)
+├── script.js           ← All interactivity (~280 lines)
 ├── public/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   ├── globals.css
-│   │   ├── sitemap.ts
-│   │   ├── robots.ts
-│   │   └── manifest.ts
-│   ├── components/
-│   │   ├── effects/        # Background canvases, mesh, loading screen
-│   │   ├── layout/         # Navbar, Footer, BackToTop, ThemeToggle
-│   │   ├── sections/       # All page sections (Hero, About, ...)
-│   │   └── ui/             # Reusable primitives (Section, GlassCard, ...)
-│   ├── lib/
-│   │   ├── data.ts         # All content (single source of truth)
-│   │   └── utils.ts
-│   └── types/
-│       └── index.ts
-├── tailwind.config.ts
-├── tsconfig.json
-└── next.config.mjs
-```
-
-All copy, links, projects, certifications, etc. live in **`src/lib/data.ts`** —
-edit one file to update the site.
-
----
-
-## Getting Started
-
-> Requires Node.js 18.17+ (or 20+).
-
-```bash
-cd portfolio
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Production build
-
-```bash
-npm run build
-npm run start
-```
-
-### Type-check & lint
-
-```bash
-npm run type-check
-npm run lint
+│   └── resume.pdf      ← Downloadable resume
+├── CODE_OF_CONDUCT.md
+├── contributions.md
+├── security.md
+└── README.md
 ```
 
 ---
 
 ## Customization
 
-1. **Personal info & links:** `src/lib/data.ts` (`personal` object).
-2. **Resume PDF:** drop `resume.pdf` into `portfolio/public/`.
-3. **Open Graph image:** add `og-image.png` (1200×630) to `portfolio/public/`.
-4. **PWA icons:** add `icon-192.png` and `icon-512.png` to `portfolio/public/`.
-5. **Site URL:** update `personal.siteUrl` in `data.ts` for SEO + sitemap.
-6. **Colors:** tweak the design tokens in `tailwind.config.ts`.
+1. **Personal info:** Edit directly in `index.html` (search for your name/email/links)
+2. **Resume:** Replace `public/resume.pdf`
+3. **Colors:** Change CSS custom properties at the top of `style.css`
+4. **Projects:** Add/remove project cards in the `#projects` section of `index.html`
 
 ---
 
 ## Deployment
 
-The simplest path is [Vercel](https://vercel.com/):
+### GitHub Pages
+Push to `main` branch, then in repo Settings → Pages → Source: `main` / root.
 
-```bash
-# from the portfolio/ directory
-npx vercel
-```
-
-Or deploy on any platform that supports Next.js 14 (Netlify, Cloudflare, AWS, etc.).
+### Netlify / Vercel
+Drag-and-drop the repo folder or connect via Git — no build command needed.
 
 ---
 

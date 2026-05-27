@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag Parashar | Microsoft Learn Student Ambassador | AI/ML Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Chirag Parashar, Computer Science Engineering Student, Microsoft Learn Student Ambassador, AI/ML Enthusiast, Python Developer and Open Source Contributor.">
+    <meta name="keywords" content="Chirag Parashar, Microsoft Learn Student Ambassador, AI ML Engineer, Python Developer, Software Engineer, Portfolio">
+    <meta name="author" content="Chirag Parashar">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chirag Parashar | AI/ML Engineer & MLSA Portfolio">
+    <meta property="og:description" content="AI/ML Engineer, Software Developer, Microsoft Learn Student Ambassador. Building intelligent solutions with AI, data & code.">
+    <meta property="og:url" content="https://chiragparashar24.github.io/portfolio-website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chirag Parashar | AI/ML Engineer Portfolio">
+    <meta name="twitter:description" content="Microsoft Learn Student Ambassador | AI/ML Enthusiast | Software Developer">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chirag Parashar",
+        "url": "https://chiragparashar24.github.io/portfolio-website",
+        "jobTitle": "AI/ML Engineer & Software Developer",
+        "worksFor": {"@type": "Organization", "name": "Microsoft (Student Ambassador)"},
+        "alumniOf": {"@type": "CollegeOrUniversity", "name": "Pimpri Chinchwad University"},
+        "knowsAbout": ["AI", "Machine Learning", "Python", "Software Engineering", "Web Development"],
+        "sameAs": ["https://github.com/chiragparashar24", "https://linkedin.com/in/chiragparashar9665"]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <span class="loader-text">CP</span>
+        </div>
+        <p class="loader-subtitle">Loading portfolio...</p>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <header id="navbar" class="navbar">
+        <nav class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Chirag<span class="text-primary">.dev</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="public/resume.pdf" download class="btn-resume">Resume</a>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hero-bg-mesh"></div>
+        <div class="container hero-grid">
+            <div class="hero-content slide-in-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for Internships
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hi, I'm</span>
+                    <span class="hero-name gradient-text">Chirag Parashar.</span>
+                    <span class="hero-tagline">Building Intelligent Solutions with AI, Data & Code</span>
+                </h1>
+                <div class="hero-typing">
+                    <span class="typing-prefix"><i class="fas fa-terminal"></i> role:</span>
+                    <span id="typed-text" class="typed-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-subtitle">
+                    <strong>Microsoft Learn Student Ambassador · AI/ML Enthusiast · Software Developer · Open Source Contributor</strong>
+                </p>
+                <p class="hero-desc">I am a Computer Science Engineering student passionate about Artificial Intelligence, Machine Learning, Python Development, and building impactful software solutions.</p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View Projects</a>
+                    <a href="public/resume.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
+                    <a href="#contact" class="btn btn-ghost"><i class="fas fa-envelope"></i> Contact Me</a>
+                </div>
+                <div class="hero-socials">
+                    <span class="social-label">Find me on</span>
+                    <div class="social-icons">
+                        <a href="https://github.com/chiragparashar24" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/chiragparashar9665" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:chiragparashar1812@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://twitter.com/chiragparashar24" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual slide-in-right">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span class="code-filename">~/chirag-parashar/intro.py</span>
+                    </div>
+                    <pre class="code-body"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="arg">self</span>):
+        <span class="arg">self</span>.name = <span class="str">"Chirag Parashar"</span>
+        <span class="arg">self</span>.role = <span class="str">"AI/ML · Software"</span>
+        <span class="arg">self</span>.stack = [<span class="str">"Python"</span>, <span class="str">"TS"</span>, <span class="str">"React"</span>]
+        <span class="arg">self</span>.fuel = <span class="str">"☕ + curiosity"</span>
+
+    <span class="kw">def</span> <span class="fn">build</span>(<span class="arg">self</span>, idea):
+        <span class="kw">return</span> <span class="str">f"{idea} → shipped"</span></code></pre>
+                    <div class="code-footer"><span class="status-dot"></span> build OK · 0 errors</div>
+                </div>
+                <div class="floating-badge badge-cgpa"><i class="fas fa-graduation-cap"></i><div><strong>8.71 CGPA</strong><small>B.Tech CSE (AI & ML)</small></div></div>
+                <div class="floating-badge badge-mlsa"><i class="fab fa-microsoft"></i><div><strong>Microsoft</strong><small>Learn Student Ambassador</small></div></div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator"><span>Scroll</span><i class="fas fa-arrow-down"></i></a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>About Me</span>
+                <h2 class="section-title"><span class="gradient-text">The engineer behind the keyboard</span></h2>
+                <p class="section-desc">Passionate about turning ambitious ideas into clean, reliable software.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text glass-card reveal">
+                    <p>I am a final-year B.Tech Computer Science Engineering (AI & ML) student with an <strong class="text-primary">8.71 CGPA</strong>, currently serving as a <strong class="text-primary">Microsoft Learn Student Ambassador</strong> and <strong class="text-secondary">Vice Secretary of the ACM Student Chapter</strong>. I love turning ambitious ideas into clean, reliable software — from machine learning systems and Python tools to responsive, accessible web experiences.</p>
+                    <p>Beyond classes, I'm an open-source contributor and a serial hackathon participant who loves shipping things that actually help people.</p>
+                    <div class="about-info-grid">
+                        <div class="about-info-card">
+                            <span class="info-icon primary"><i class="fas fa-graduation-cap"></i></span>
+                            <div><small>Education</small><strong>B.Tech CSE (AI & ML)</strong><span>PCU · CGPA 8.71</span></div>
+                        </div>
+                        <div class="about-info-card">
+                            <span class="info-icon secondary"><i class="fas fa-bullseye"></i></span>
+                            <div><small>Career Objective</small><strong>AI/ML & SDE Internships</strong><span>Ship impactful, intelligent products</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-focus-areas">
+                    <div class="focus-card glass-card reveal">
+                        <span class="focus-icon primary"><i class="fas fa-brain"></i></span>
+                        <h3>AI / ML Engineering</h3>
+                        <p>Designing and deploying ML systems — from data pipelines to model serving — for real-world impact.</p>
+                    </div>
+                    <div class="focus-card glass-card reveal">
+                        <span class="focus-icon secondary"><i class="fab fa-python"></i></span>
+                        <h3>Python Development</h3>
+                        <p>Backend services, data tools, and automation scripts written in clean, idiomatic Python.</p>
+                    </div>
+                    <div class="focus-card glass-card reveal">
+                        <span class="focus-icon accent"><i class="fas fa-code"></i></span>
+                        <h3>Software Engineering</h3>
+                        <p>End-to-end product thinking — architecture, performance, accessibility, and DX.</p>
+                    </div>
+                    <div class="focus-card glass-card reveal">
+                        <span class="focus-icon primary"><i class="fas fa-users"></i></span>
+                        <h3>Open Source & Community</h3>
+                        <p>Contributing to projects, mentoring peers, and growing developer communities at scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Skills</span>
+                <h2 class="section-title"><span class="gradient-text">My technical toolkit</span></h2>
+                <p class="section-desc">A blend of programming languages, AI/ML frameworks, web tech, and soft skills.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-cat-header"><span class="skill-cat-icon primary"><i class="fas fa-code"></i></span><div><h3>Programming Languages</h3><p>Core languages for production software</p></div></div>
+                    <div class="skill-bars">
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-python"></i> Python</span><span>92%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="92"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fas fa-c"></i> C++</span><span>82%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="82"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-js"></i> JavaScript</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="85"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fas fa-code"></i> TypeScript</span><span>75%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="75"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-cat-header"><span class="skill-cat-icon secondary"><i class="fas fa-brain"></i></span><div><h3>AI / ML & Data Science</h3><p>Intelligent systems & analytics</p></div></div>
+                    <div class="skill-bars">
+                        <div class="skill-item"><div class="skill-info"><span>NumPy</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="90"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>Pandas</span><span>88%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="88"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>Scikit-Learn</span><span>84%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="84"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>TensorFlow</span><span>75%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>OpenCV / DeepFace</span><span>78%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="78"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-cat-header"><span class="skill-cat-icon accent"><i class="fab fa-react"></i></span><div><h3>Web Development</h3><p>Modern, responsive web experiences</p></div></div>
+                    <div class="skill-bars">
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-react"></i> React / Next.js</span><span>82%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="82"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-html5"></i> HTML5</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="95"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-css3-alt"></i> CSS3 / Tailwind</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="90"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-node-js"></i> Node.js</span><span>75%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>Flask / Django</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="85"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-cat-header"><span class="skill-cat-icon primary"><i class="fas fa-server"></i></span><div><h3>Databases & Backend</h3><p>Data layers & APIs that scale</p></div></div>
+                    <div class="skill-bars">
+                        <div class="skill-item"><div class="skill-info"><span><i class="fas fa-database"></i> MySQL</span><span>82%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="82"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>SQLite</span><span>80%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="80"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>REST APIs</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress primary" data-width="85"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-cat-header"><span class="skill-cat-icon secondary"><i class="fas fa-gears"></i></span><div><h3>Tools & DevOps</h3><p>The toolkit I reach for every day</p></div></div>
+                    <div class="skill-bars">
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-git-alt"></i> Git & GitHub</span><span>92%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="92"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-linux"></i> Linux</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="85"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fab fa-docker"></i> Docker</span><span>65%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="65"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span><i class="fas fa-cloud"></i> Cloud</span><span>70%</span></div><div class="skill-bar"><div class="skill-progress secondary" data-width="70"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-cat-header"><span class="skill-cat-icon accent"><i class="fas fa-users"></i></span><div><h3>Soft Skills</h3><p>How I work with teams & ship outcomes</p></div></div>
+                    <div class="skill-bars">
+                        <div class="skill-item"><div class="skill-info"><span>Leadership</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="90"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>Communication</span><span>92%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="92"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>Problem Solving</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="90"></div></div></div>
+                        <div class="skill-item"><div class="skill-info"><span>Teamwork</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress accent" data-width="95"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Experience</span>
+                <h2 class="section-title"><span class="gradient-text">My journey so far</span></h2>
+                <p class="section-desc">Leadership, learning, and building — the experiences shaping me.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot secondary"></div>
+                    <div class="timeline-date">Apr 2026 – Present</div>
+                    <div class="timeline-card glass-card">
+                        <h3>Microsoft Learn Student Ambassador — Web Dev Core</h3>
+                        <p class="timeline-org text-secondary">Microsoft · PCU Chapter</p>
+                        <p>Driving technical community programs, leading workshops, and helping students upskill on Microsoft technologies and modern web development.</p>
+                        <ul class="timeline-highlights">
+                            <li><i class="fas fa-circle-check"></i> Lead Web Dev Core team, mentoring 50+ students</li>
+                            <li><i class="fas fa-circle-check"></i> Organize workshops on AI, Azure, and developer productivity</li>
+                            <li><i class="fas fa-circle-check"></i> Build community-led projects for peers</li>
+                            <li><i class="fas fa-circle-check"></i> Contribute to global MLSA initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot primary"></div>
+                    <div class="timeline-date">Mar 2026 – Present</div>
+                    <div class="timeline-card glass-card">
+                        <h3>Vice Secretary — ACM Student Chapter</h3>
+                        <p class="timeline-org text-primary">Pimpri Chinchwad University</p>
+                        <p>Leading technical initiatives, organizing flagship events, and managing cross-team collaboration.</p>
+                        <ul class="timeline-highlights">
+                            <li><i class="fas fa-circle-check"></i> Plan and execute hackathons, talks, and coding contests</li>
+                            <li><i class="fas fa-circle-check"></i> Coordinate 20+ volunteers across sub-teams</li>
+                            <li><i class="fas fa-circle-check"></i> Partner with industry mentors for tech sessions</li>
+                            <li><i class="fas fa-circle-check"></i> Champion documentation and post-event analytics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot accent"></div>
+                    <div class="timeline-date">2023 – 2027</div>
+                    <div class="timeline-card glass-card">
+                        <h3>B.Tech in Computer Science Engineering (AI & ML)</h3>
+                        <p class="timeline-org text-accent">Pimpri Chinchwad University · CGPA 8.71</p>
+                        <p>Pursuing specialization in AI and Machine Learning with a strong academic record.</p>
+                        <ul class="timeline-highlights">
+                            <li><i class="fas fa-circle-check"></i> DS, Algorithms, ML, Deep Learning, DBMS, OS, Networks</li>
+                            <li><i class="fas fa-circle-check"></i> Active in coding clubs and hackathons</li>
+                            <li><i class="fas fa-circle-check"></i> Independent research in NLP, CV, and Data Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Projects</span>
+                <h2 class="section-title"><span class="gradient-text">Things I've built</span></h2>
+                <p class="section-desc">A curated selection across AI/ML, Python development, and modern web.</p>
+            </div>
+            <div class="projects-controls reveal">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="data">Data</button>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="search" id="project-search" placeholder="Search projects, tags...">
+                </div>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <div class="project-card glass-card reveal" data-category="python web ai-ml" data-tags="python flask nlp rest render">
+                    <div class="project-banner gradient-1"><span class="project-emoji">🌐</span><span class="project-featured">⭐ Featured</span></div>
+                    <div class="project-body">
+                        <h3>Multi-Language Translation Web App</h3>
+                        <p>Flask-based web app supporting real-time multi-language translation with optimized UI and seamless deployment on Render.</p>
+                        <ul class="project-highlights"><li><i class="fas fa-circle-check"></i> Sub-second translations across 50+ languages</li><li><i class="fas fa-circle-check"></i> Modular Flask backend with clean REST endpoints</li></ul>
+                        <div class="project-tags"><span>Python</span><span>Flask</span><span>NLP</span><span>REST APIs</span><span>Render</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/chiragparashar24" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://language-translator-1-o8wf.onrender.com/" target="_blank" class="project-link primary"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal" data-category="ai-ml python" data-tags="python opencv deepface computer vision tensorflow">
+                    <div class="project-banner gradient-2"><span class="project-emoji">🧠</span><span class="project-featured">⭐ Featured</span></div>
+                    <div class="project-body">
+                        <h3>Facial Attribute Detection System</h3>
+                        <p>Deep-learning system using DeepFace and OpenCV with optimized preprocessing and accurate facial attribute detection.</p>
+                        <ul class="project-highlights"><li><i class="fas fa-circle-check"></i> Real-time multi-attribute classification</li><li><i class="fas fa-circle-check"></i> Custom preprocessing boosted accuracy by 12%</li></ul>
+                        <div class="project-tags"><span>Python</span><span>OpenCV</span><span>DeepFace</span><span>TensorFlow</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/chiragparashar24" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal" data-category="python web" data-tags="python streamlit cybersecurity ui">
+                    <div class="project-banner gradient-3"><span class="project-emoji">🔐</span></div>
+                    <div class="project-body">
+                        <h3>Random Password Generator</h3>
+                        <p>Streamlit web app that generates secure, customizable passwords with strength scoring and instant copy.</p>
+                        <ul class="project-highlights"><li><i class="fas fa-circle-check"></i> Configurable rules and entropy meter</li><li><i class="fas fa-circle-check"></i> Zero-data-leaving-browser guarantee</li></ul>
+                        <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Security</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/chiragparashar24" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://random-passwords.streamlit.app/" target="_blank" class="project-link primary"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal" data-category="web" data-tags="javascript html5 css3 date">
+                    <div class="project-banner gradient-4"><span class="project-emoji">🎂</span></div>
+                    <div class="project-body">
+                        <h3>Smart Age Calculator</h3>
+                        <p>JavaScript-based smart age calculator with leap-year handling and accurate date validation.</p>
+                        <ul class="project-highlights"><li><i class="fas fa-circle-check"></i> Accurate down to hours and minutes lived</li><li><i class="fas fa-circle-check"></i> Lightweight zero-dependency vanilla JS</li></ul>
+                        <div class="project-tags"><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/chiragparashar24/age-calculator" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://chiragparashar24.github.io/age-calculator/" target="_blank" class="project-link primary"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal" data-category="data python ai-ml" data-tags="python pandas plotly streamlit data analysis">
+                    <div class="project-banner gradient-5"><span class="project-emoji">📊</span></div>
+                    <div class="project-body">
+                        <h3>Personal Finance Dashboard</h3>
+                        <p>Interactive analytics dashboard tracking expenses, income, and savings goals using Python & data viz libraries.</p>
+                        <ul class="project-highlights"><li><i class="fas fa-circle-check"></i> Auto-categorizes transactions with ML</li><li><i class="fas fa-circle-check"></i> Exportable PDF/PNG reports</li></ul>
+                        <div class="project-tags"><span>Python</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/chiragparashar24" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal" data-category="web" data-tags="html css javascript portfolio">
+                    <div class="project-banner gradient-6"><span class="project-emoji">✨</span></div>
+                    <div class="project-body">
+                        <h3>Portfolio Website (this site)</h3>
+                        <p>Modern, responsive developer portfolio with animations, glassmorphism, and recruiter-friendly design.</p>
+                        <ul class="project-highlights"><li><i class="fas fa-circle-check"></i> Pure HTML/CSS/JS — no frameworks</li><li><i class="fas fa-circle-check"></i> Animated sliding sections & particle bg</li></ul>
+                        <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>SEO</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/chiragparashar24/portfolio-website" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#home" class="project-link primary"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="no-results" id="no-results" hidden>No projects match your filter. Try clearing the search.</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Achievements</span>
+                <h2 class="section-title"><span class="gradient-text">By the numbers</span></h2>
+                <p class="section-desc">Milestones that mark my journey as a student, builder, and community lead.</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card glass-card reveal">
+                    <span class="achieve-icon primary"><i class="fab fa-microsoft"></i></span>
+                    <div class="achieve-value text-primary">★</div>
+                    <p>Microsoft Learn Student Ambassador</p>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <span class="achieve-icon secondary"><i class="fas fa-code"></i></span>
+                    <div class="achieve-value text-secondary"><span class="counter" data-target="350">0</span>+</div>
+                    <p>Coding Challenges Solved</p>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <span class="achieve-icon accent"><i class="fas fa-trophy"></i></span>
+                    <div class="achieve-value text-accent"><span class="counter" data-target="6">0</span>+</div>
+                    <p>Hackathons Participated</p>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <span class="achieve-icon primary"><i class="fas fa-chalkboard-user"></i></span>
+                    <div class="achieve-value text-primary"><span class="counter" data-target="12">0</span>+</div>
+                    <p>Workshops Conducted</p>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <span class="achieve-icon secondary"><i class="fab fa-github"></i></span>
+                    <div class="achieve-value text-secondary"><span class="counter" data-target="25">0</span>+</div>
+                    <p>Open Source Contributions</p>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <span class="achieve-icon accent"><i class="fas fa-user-graduate"></i></span>
+                    <div class="achieve-value text-accent"><span class="counter" data-target="50">0</span>+</div>
+                    <p>Students Mentored</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Leadership</span>
+                <h2 class="section-title"><span class="gradient-text">Building communities, not just code</span></h2>
+                <p class="section-desc">Leadership roles where I've organized, mentored, and shipped at scale.</p>
+            </div>
+            <div class="leadership-timeline">
+                <div class="leadership-card glass-card reveal">
+                    <span class="lead-icon primary"><i class="fab fa-microsoft"></i></span>
+                    <div class="lead-header"><h3>Microsoft Learn Student Ambassador</h3><span class="lead-date">Apr 2026 – Present</span></div>
+                    <p class="lead-org text-primary">Microsoft · Web Development Core</p>
+                    <ul><li><i class="fas fa-circle-check"></i> Lead Web Dev Core team in PCU MLSA chapter</li><li><i class="fas fa-circle-check"></i> Run workshops on AI, Azure, GitHub, and modern web stacks</li><li><i class="fas fa-circle-check"></i> Mentor students on real-world projects & open-source</li></ul>
+                </div>
+                <div class="leadership-card glass-card reveal">
+                    <span class="lead-icon secondary"><i class="fas fa-users"></i></span>
+                    <div class="lead-header"><h3>Vice Secretary — ACM Student Chapter</h3><span class="lead-date">Mar 2026 – Present</span></div>
+                    <p class="lead-org text-secondary">PCU</p>
+                    <ul><li><i class="fas fa-circle-check"></i> Lead technical initiatives across hackathons & contests</li><li><i class="fas fa-circle-check"></i> Coordinate 20+ student volunteers</li><li><i class="fas fa-circle-check"></i> Partner with industry mentors for high-impact events</li></ul>
+                </div>
+                <div class="leadership-card glass-card reveal">
+                    <span class="lead-icon accent"><i class="fas fa-chalkboard-user"></i></span>
+                    <div class="lead-header"><h3>Event Organizer & Speaker</h3><span class="lead-date">2024 – Present</span></div>
+                    <p class="lead-org text-accent">Campus Tech Communities</p>
+                    <ul><li><i class="fas fa-circle-check"></i> Conducted sessions on Python, ML, and web dev</li><li><i class="fas fa-circle-check"></i> Coordinated events with 200+ participants</li><li><i class="fas fa-circle-check"></i> Managed cross-functional teams end-to-end</li></ul>
+                </div>
+                <div class="leadership-card glass-card reveal">
+                    <span class="lead-icon primary"><i class="fas fa-lightbulb"></i></span>
+                    <div class="lead-header"><h3>Technology Advocate & Mentor</h3><span class="lead-date">2024 – Present</span></div>
+                    <p class="lead-org text-primary">Open Source · Student Communities</p>
+                    <ul><li><i class="fas fa-circle-check"></i> Advocate for AI, ML, and open-source adoption</li><li><i class="fas fa-circle-check"></i> One-on-one mentorship for juniors</li><li><i class="fas fa-circle-check"></i> Curate learning paths and resource hubs</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Certifications</span>
+                <h2 class="section-title"><span class="gradient-text">Continuous learning, validated</span></h2>
+                <p class="section-desc">Programs and certifications across security, cloud, AI, and engineering.</p>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card glass-card reveal" data-cert="google-cyber">
+                    <span class="cert-icon"><i class="fab fa-google"></i></span>
+                    <h3>Google Cybersecurity Professional Certificate</h3>
+                    <p class="cert-issuer">Google · Coursera</p>
+                    <p>Security frameworks, network security, Linux, SQL, Python, and incident response.</p>
+                    <div class="cert-skills"><span>Network Security</span><span>Linux</span><span>SQL</span><span>Python</span><span>SIEM</span></div>
+                </div>
+                <div class="cert-card glass-card reveal" data-cert="redhat">
+                    <span class="cert-icon"><i class="fab fa-redhat"></i></span>
+                    <h3>Red Hat System Administration I (RH124)</h3>
+                    <p class="cert-issuer">Red Hat</p>
+                    <p>Shell scripting, user management, file systems, networking, and system services.</p>
+                    <div class="cert-skills"><span>Linux</span><span>Bash</span><span>SysAdmin</span><span>Networking</span></div>
+                </div>
+                <div class="cert-card glass-card reveal" data-cert="deloitte">
+                    <span class="cert-icon"><i class="fas fa-shield-halved"></i></span>
+                    <h3>Cyber Security Job Simulation</h3>
+                    <p class="cert-issuer">Deloitte Australia · Forage</p>
+                    <p>Real-world security analyst tasks: log analysis, threat triage, and security advisory writing.</p>
+                    <div class="cert-skills"><span>Threat Analysis</span><span>Log Investigation</span><span>Security Reporting</span></div>
+                </div>
+                <div class="cert-card glass-card reveal" data-cert="tata">
+                    <span class="cert-icon"><i class="fas fa-brain"></i></span>
+                    <h3>GenAI Powered Data Analytics</h3>
+                    <p class="cert-issuer">Tata · Forage</p>
+                    <p>End-to-end data analytics with Generative AI for insights, dashboards, and reporting.</p>
+                    <div class="cert-skills"><span>Data Analytics</span><span>GenAI</span><span>Storytelling</span><span>Dashboards</span></div>
+                </div>
+                <div class="cert-card glass-card reveal" data-cert="hackerrank">
+                    <span class="cert-icon"><i class="fas fa-certificate"></i></span>
+                    <h3>Software Engineer Intern Certificate</h3>
+                    <p class="cert-issuer">HackerRank</p>
+                    <p>Problem solving, REST APIs, databases, and software engineering fundamentals.</p>
+                    <div class="cert-skills"><span>Problem Solving</span><span>REST APIs</span><span>Databases</span><span>OOP</span></div>
+                </div>
+                <div class="cert-card glass-card reveal" data-cert="azure">
+                    <span class="cert-icon"><i class="fab fa-microsoft"></i></span>
+                    <h3>Microsoft Azure & AI Fundamentals</h3>
+                    <p class="cert-issuer">Microsoft Learn</p>
+                    <p>Azure cloud services and AI workloads on the Microsoft Cloud platform.</p>
+                    <div class="cert-skills"><span>Azure</span><span>Cloud</span><span>AI Services</span><span>Cognitive Services</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section id="github-stats" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Open Source</span>
+                <h2 class="section-title"><span class="gradient-text">My GitHub at a glance</span></h2>
+                <p class="section-desc">Live stats fetched from the GitHub API.</p>
+            </div>
+            <div class="github-grid">
+                <div class="github-profile glass-card reveal">
+                    <div class="gh-header"><i class="fab fa-github"></i><div><strong>@chiragparashar24</strong><a href="https://github.com/chiragparashar24" target="_blank">github.com/chiragparashar24</a></div></div>
+                    <div class="gh-stats-grid">
+                        <div class="gh-stat"><i class="fas fa-code-branch text-primary"></i><strong id="gh-repos">30+</strong><span>Repositories</span></div>
+                        <div class="gh-stat"><i class="fas fa-users text-secondary"></i><strong id="gh-followers">50+</strong><span>Followers</span></div>
+                        <div class="gh-stat"><i class="fas fa-star text-accent"></i><strong id="gh-stars">20+</strong><span>Stars Earned</span></div>
+                        <div class="gh-stat"><i class="fas fa-code text-primary"></i><strong>Python</strong><span>Top Language</span></div>
+                    </div>
+                </div>
+                <div class="github-charts glass-card reveal">
+                    <p class="gh-subtitle">Contribution Graph</p>
+                    <img src="https://ghchart.rshah.org/00D4FF/chiragparashar24" alt="GitHub Contribution Graph" loading="lazy" class="gh-chart">
+                    <div class="gh-images">
+                        <img src="https://github-readme-stats.vercel.app/api?username=chiragparashar24&show_icons=true&theme=tokyonight&hide_border=true&bg_color=11182700&title_color=00D4FF&icon_color=7C3AED&text_color=cbd5e1" alt="GitHub Stats" loading="lazy">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chiragparashar24&layout=compact&theme=tokyonight&hide_border=true&bg_color=11182700&title_color=00D4FF&text_color=cbd5e1" alt="Top Languages" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Blog</span>
+                <h2 class="section-title"><span class="gradient-text">Writing & sharing what I learn</span></h2>
+                <p class="section-desc">Technical articles on AI, ML, Python, and modern software development.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card glass-card reveal">
+                    <div class="blog-meta"><span><i class="fas fa-calendar"></i> May 2026</span><span><i class="fas fa-clock"></i> 8 min read</span></div>
+                    <span class="blog-emoji">🌐</span>
+                    <h3>How I Built a Real-Time Multi-Language Translation Web App with Flask</h3>
+                    <p>A deep dive into the architecture, deployment, and UX choices behind a sub-second translation app.</p>
+                    <div class="blog-tags"><span>#Python</span><span>#Flask</span><span>#NLP</span></div>
+                </article>
+                <article class="blog-card glass-card reveal">
+                    <div class="blog-meta"><span><i class="fas fa-calendar"></i> Apr 2026</span><span><i class="fas fa-clock"></i> 10 min read</span></div>
+                    <span class="blog-emoji">🧠</span>
+                    <h3>A Practical Guide to Facial Attribute Detection with DeepFace + OpenCV</h3>
+                    <p>How to design a robust CV pipeline for real-time age, gender, and emotion classification.</p>
+                    <div class="blog-tags"><span>#ComputerVision</span><span>#DeepFace</span><span>#OpenCV</span></div>
+                </article>
+                <article class="blog-card glass-card reveal">
+                    <div class="blog-meta"><span><i class="fas fa-calendar"></i> Mar 2026</span><span><i class="fas fa-clock"></i> 6 min read</span></div>
+                    <span class="blog-emoji">🚀</span>
+                    <h3>From Zero to Microsoft Learn Student Ambassador: My Roadmap</h3>
+                    <p>The exact community-building, learning, and project work that helped me earn the MLSA role.</p>
+                    <div class="blog-tags"><span>#Career</span><span>#MLSA</span><span>#Community</span></div>
+                </article>
+                <article class="blog-card glass-card reveal">
+                    <div class="blog-meta"><span><i class="fas fa-calendar"></i> Feb 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+                    <span class="blog-emoji">📊</span>
+                    <h3>Five Pandas Patterns That Made My Data Analysis 3× Faster</h3>
+                    <p>Practical, hard-won lessons from working with messy real-world datasets in Python.</p>
+                    <div class="blog-tags"><span>#Pandas</span><span>#DataScience</span><span>#Python</span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Testimonials</span>
+                <h2 class="section-title"><span class="gradient-text">What others say</span></h2>
+                <p class="section-desc">Notes from mentors, peers, and collaborators.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card reveal">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Chirag is one of the most driven students I have mentored. He combines a rare blend of technical depth in AI/ML with the leadership skills to inspire his peers."</p>
+                    <div class="testimonial-author"><span class="author-avatar">FM</span><div><strong>Faculty Mentor</strong><small>Professor, CSE · PCU</small></div></div>
+                </div>
+                <div class="testimonial-card glass-card reveal">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Working with Chirag on workshops has been a pleasure. He turns complex topics into engaging sessions that students actually retain and apply."</p>
+                    <div class="testimonial-author"><span class="author-avatar">PL</span><div><strong>Peer Lead</strong><small>MLSA Senior Ambassador</small></div></div>
+                </div>
+                <div class="testimonial-card glass-card reveal">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"During our 36-hour hackathon, Chirag shipped a clean ML pipeline and the frontend in parallel. Reliable, fast, and a great collaborator under pressure."</p>
+                    <div class="testimonial-author"><span class="author-avatar">HT</span><div><strong>Hackathon Teammate</strong><small>SDE Intern · Top Startup</small></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><span class="badge-dot"></span>Contact</span>
+                <h2 class="section-title"><span class="gradient-text">Let's build something together</span></h2>
+                <p class="section-desc">Recruiting, collaborating, or just want to chat about AI and software? My inbox is always open.</p>
+            </div>
+            <div class="contact-grid">
+                <form id="contact-form" class="contact-form glass-card reveal" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                        <span class="form-error" id="subject-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me a bit about what you have in mind..." required></textarea>
+                        <span class="form-error" id="message-error"></span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        <span class="form-status" id="form-status"></span>
+                    </div>
+                </form>
+                <div class="contact-info glass-card reveal">
+                    <p class="contact-info-label">Or reach me directly</p>
+                    <ul class="contact-list">
+                        <li><a href="mailto:chiragparashar1812@gmail.com"><span class="contact-icon"><i class="fas fa-envelope"></i></span><div><small>Email</small><span>chiragparashar1812@gmail.com</span></div></a></li>
+                        <li><a href="https://linkedin.com/in/chiragparashar9665" target="_blank"><span class="contact-icon"><i class="fab fa-linkedin"></i></span><div><small>LinkedIn</small><span>linkedin.com/in/chiragparashar9665</span></div></a></li>
+                        <li><a href="https://github.com/chiragparashar24" target="_blank"><span class="contact-icon"><i class="fab fa-github"></i></span><div><small>GitHub</small><span>github.com/chiragparashar24</span></div></a></li>
+                        <li><span class="contact-icon"><i class="fas fa-location-dot"></i></span><div><small>Location</small><span>India</span></div></li>
+                    </ul>
+                    <div class="contact-status">
+                        <p class="status-badge"><span class="status-dot"></span>Currently</p>
+                        <p>Open to <strong>SDE / AI-ML / Data Science internships</strong> and summer 2027 full-time roles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <p class="footer-name gradient-text-static">Chirag Parashar</p>
+                <p>AI/ML Engineer · Software Developer. Building intelligent solutions with AI, data & code.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/chiragparashar24" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/chiragparashar9665" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:chiragparashar1812@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://twitter.com/chiragparashar24" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p><a href="mailto:chiragparashar1812@gmail.com">chiragparashar1812@gmail.com</a></p>
+                <p>India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Chirag Parashar. Crafted with HTML, CSS & JavaScript.</p>
+            <p><span class="status-dot"></span> Open to internships & full-time roles</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
