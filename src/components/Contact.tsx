@@ -24,19 +24,22 @@ export default function Contact() {
     setError('')
 
     try {
-      const response = await fetch('https://formspree.io/f/xyzpzyby', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          access_key: 'd487ed1b-0ec8-4922-ab63-8bc6304dc1b9',
           name: formData.name,
           email: formData.email,
           message: formData.message,
         }),
       })
 
-      if (response.ok) {
+      const result = await response.json()
+
+      if (result.success) {
         setFormData({ name: '', email: '', message: '' })
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 4000)
