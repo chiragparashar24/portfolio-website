@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <div className="dark">
-      <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white transition-colors min-h-screen">
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white transition-colors min-h-screen">
         <Navbar onThemeToggle={handleThemeToggle} isDark={isDark} />
         <main className="pt-16">
           <Hero onThemeToggle={handleThemeToggle} isDark={isDark} />
