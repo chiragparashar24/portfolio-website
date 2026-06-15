@@ -8,18 +8,45 @@ export default function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (formData.name && formData.email && formData.message) {
-      setFormData({ name: '', email: '', message: '' })
-      setSubmitted(true)
-      setTimeout(() => setSubmitted(false), 4000)
+    if (!formData.name || !formData.email || !formData.message) return
+
+    setLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('https://formspree.io/f/xyzpzyby', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      })
+
+      if (response.ok) {
+        setFormData({ name: '', email: '', message: '' })
+        setSubmitted(true)
+        setTimeout(() => setSubmitted(false), 4000)
+      } else {
+        setError('Failed to send message. Please try again.')
+      }
+    } catch (err) {
+      setError('Error sending message. Please try again.')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -76,14 +103,21 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-gradient-to-r from-accent to-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all transform"
+              disabled={loading}
+              className="w-full px-8 py-4 bg-gradient-to-r from-accent to-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all transform disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
 
             {submitted && (
               <p className="text-center text-accent font-medium">
-                ✅ Message sent! Opening email client...
+                ✅ Message sent successfully! I'll get back to you soon.
+              </p>
+            )}
+
+            {error && (
+              <p className="text-center text-red-400 font-medium">
+                ❌ {error}
               </p>
             )}
           </form>
