@@ -31,8 +31,16 @@ export default function App() {
   }
 
   return (
-    <div className="dark">
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white transition-colors min-h-screen">
+    <div className={isDark ? 'dark' : ''}>
+      <div
+        className="transition-colors min-h-screen"
+        style={{
+          background: isDark
+            ? 'linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a)'
+            : 'linear-gradient(to bottom right, #ffffff, #f1f5f9, #ffffff)',
+          color: isDark ? '#ffffff' : '#0f172a'
+        }}
+      >
         <Navbar onThemeToggle={handleThemeToggle} isDark={isDark} />
         <main className="pt-16">
           <Hero onThemeToggle={handleThemeToggle} isDark={isDark} />

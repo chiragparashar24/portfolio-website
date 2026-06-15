@@ -17,11 +17,9 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (formData.name && formData.email && formData.message) {
-      const mailtoLink = `mailto:chiragparashar1812@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
-      window.location.href = mailtoLink
       setFormData({ name: '', email: '', message: '' })
       setSubmitted(true)
-      setTimeout(() => setSubmitted(false), 3000)
+      setTimeout(() => setSubmitted(false), 4000)
     }
   }
 
