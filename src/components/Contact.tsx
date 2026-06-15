@@ -5,6 +5,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
@@ -40,7 +41,7 @@ export default function Contact() {
       const result = await response.json()
 
       if (result.success) {
-        setFormData({ name: '', email: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', message: '' })
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 4000)
       } else {
@@ -68,77 +69,88 @@ export default function Contact() {
           Whether you have a project idea, a collaboration opportunity, or just want to chat about tech, I'm always eager to connect and explore possibilities.
         </p>
 
-        {/* Contact Form */}
-        <div className="mb-16 max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none"
-              />
-            </div>
+        {/* Contact Form & Social Links Side by Side */}
+        <div className="mb-16 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Contact Form */}
+          <div className="md:col-span-2">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none"
+                />
+              </div>
 
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none"
-              />
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone (Optional)"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none"
+                />
+              </div>
 
-            <div>
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none resize-none"
-              />
-            </div>
+              <div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={5}
+                  className="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 focus:border-accent focus:bg-white/15 text-white placeholder-white/50 font-medium transition-all outline-none resize-none"
+                />
+              </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full px-8 py-4 bg-gradient-to-r from-accent to-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all transform disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {loading ? 'Sending...' : 'Send Message'}
-            </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full px-8 py-4 bg-gradient-to-r from-accent to-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all transform disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? 'Sending...' : 'Send Message'}
+              </button>
 
-            {submitted && (
-              <p className="text-center text-accent font-medium">
-                ✅ Message sent successfully! I'll get back to you soon.
-              </p>
-            )}
+              {submitted && (
+                <p className="text-center text-accent font-medium">
+                  ✅ Message sent successfully! I'll get back to you soon.
+                </p>
+              )}
 
-            {error && (
-              <p className="text-center text-red-400 font-medium">
-                ❌ {error}
-              </p>
-            )}
-          </form>
-        </div>
+              {error && (
+                <p className="text-center text-red-400 font-medium">
+                  ❌ {error}
+                </p>
+              )}
+            </form>
+          </div>
 
-        {/* Social Links */}
-        <div className="flex gap-6 justify-center flex-wrap">
-          {socialLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 hover:border-white/40 hover:scale-110 transition-all transform backdrop-blur-sm"
-            >
-              {link.icon} {link.name}
-            </a>
-          ))}
+          {/* Social Links Sidebar */}
+          <div className="md:col-span-1 flex flex-col gap-4 justify-start">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 hover:border-white/40 hover:scale-105 transition-all transform backdrop-blur-sm text-center"
+              >
+                {link.icon} <br /> {link.name}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
