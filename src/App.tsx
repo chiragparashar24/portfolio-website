@@ -49,8 +49,14 @@ export default function App() {
           <Skills />
           <Contact />
         </main>
-        <footer className="border-t border-white/10 py-8 px-4 text-center text-white/60">
-          <p className="font-medium">Made with 🫶🏻 by Chirag Parashar</p>
+        <footer
+          className="py-8 px-4 text-center font-medium transition-colors"
+          style={{
+            borderTop: isDark ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(15,23,42,0.1)',
+            color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(15,23,42,0.6)'
+          }}
+        >
+          <p>Made with 🫶🏻 by Chirag Parashar</p>
         </footer>
       </div>
     </div>
