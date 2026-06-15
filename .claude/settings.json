@@ -5,7 +5,22 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(git pull *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(curl -s -I https://chiragparashar24.github.io/portfolio-website/)",
+      "Bash(curl -s https://chiragparashar24.github.io/portfolio-website/)",
+      "Bash(curl -s http://localhost:3002/portfolio-website/)",
+      "Bash(curl -s https://chiragparashar24.github.io/portfolio-website/assets/index-vdFgQ6tx.css)",
+      "Bash(npm list *)",
+      "Bash(npx gh-pages *)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(curl -H \"Cache-Control: no-cache\" https://chiragparashar24.github.io/portfolio-website/)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(curl -I -H \"Cache-Control: no-cache, no-store, must-revalidate\" https://chiragparashar24.github.io/portfolio-website/)",
+      "Bash(curl -s https://chiragparashar24.github.io/portfolio-website/assets/index-DNMzQQ3W.js)",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(gh api *)"
     ]
   }
 }
