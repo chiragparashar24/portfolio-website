@@ -20,7 +20,9 @@
       "Bash(curl -s https://chiragparashar24.github.io/portfolio-website/assets/index-DNMzQQ3W.js)",
       "Bash(git checkout *)",
       "Bash(git stash *)",
-      "Bash(gh api *)"
+      "Bash(gh api *)",
+      "Bash(cp dist/index.html .)",
+      "Bash(cp -r dist/assets/* assets/)"
     ]
   }
 }
