@@ -8,7 +8,7 @@ export default function Projects() {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <h2 className="animate-slide-up text-4xl md:text-5xl font-black text-white text-center mb-20">
+        <h2 className=" text-4xl md:text-5xl font-black text-white text-center mb-20">
           Featured Projects
         </h2>
 
@@ -16,8 +16,7 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <div
               key={project.id}
-              className="animate-slide-up p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300 transform group overflow-hidden relative"
-              style={{ animationDelay: `${0.1 + idx * 0.15}s` }}
+              className=" p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300 transform group overflow-hidden relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/5 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative">

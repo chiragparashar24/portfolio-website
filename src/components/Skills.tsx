@@ -8,7 +8,7 @@ export default function Skills() {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <h2 className="animate-slide-up text-4xl md:text-5xl font-black text-white text-center mb-20">
+        <h2 className=" text-4xl md:text-5xl font-black text-white text-center mb-20">
           Technical Skills
         </h2>
 
@@ -16,8 +16,7 @@ export default function Skills() {
           {skills.map((skill, idx) => (
             <div
               key={skill.id}
-              className="animate-slide-up p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300 transform group"
-              style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+              className=" p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300 transform group"
             >
               <h3 className="text-lg font-bold text-white mb-6 group-hover:text-accent transition-colors">{skill.category}</h3>
               <div className="flex flex-wrap gap-3">

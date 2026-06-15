@@ -8,15 +8,15 @@ export default function Contact() {
       </div>
 
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="animate-slide-up text-4xl md:text-5xl font-black text-white mb-6">
+        <h2 className=" text-4xl md:text-5xl font-black text-white mb-6">
           Get In Touch
         </h2>
 
-        <p className="animate-slide-up text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12">
+        <p className=" text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12">
           Whether you have a project idea, a collaboration opportunity, or just want to chat about tech, I'm always eager to connect and explore possibilities.
         </p>
 
-        <div className="animate-slide-up flex gap-6 justify-center flex-wrap">
+        <div className=" flex gap-6 justify-center flex-wrap">
           {socialLinks.map((link) => (
             <a
               key={link.name}
