@@ -53,7 +53,7 @@ portfolio-website/
 
 - **Name:** Chirag Parashar  
 - **Role:** AI/ML Developer & Full-Stack Engineer  
-- **CGPA:** 8.90  
+- **CGPA:** 8.71  
 - **Focus Areas:** AI/ML, Backend Development, Web Technologies  
 
 ---
