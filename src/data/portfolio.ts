@@ -1,4 +1,10 @@
-import type { Project, Metric, Experience, Skill, SocialLink } from '@/types'
+import type {
+  Project,
+  Metric,
+  Experience,
+  Skill,
+  SocialLink,
+} from '@/types'
 
 export const metrics: Metric[] = [
   { value: '8.71', label: 'CGPA' },
@@ -49,6 +55,14 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
+    id: 'nexlevr-data-analyst-intern',
+    title: 'Data Analyst Intern',
+    role: 'NexLevr',
+    duration: 'Jul 2026 – Sep 2026',
+    description:
+      'Successfully completed an internship as a Data Analyst Intern at NEXLEVR. Gained exposure to data analytics and professional practices.',
+  },
+  {
     id: 'acm-vp',
     title: 'Vice Secretary',
     role: 'ACM Student Chapter – Pimpri Chinchwad University',
@@ -75,22 +89,51 @@ export const skills: Skill[] = [
   {
     id: 'web-backend',
     category: 'Web & Backend',
-    items: ['Flask', 'Django', 'Streamlit', 'HTML', 'CSS', 'Bootstrap', 'REST APIs'],
+    items: [
+      'Flask',
+      'Django',
+      'Streamlit',
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'REST APIs',
+    ],
   },
   {
     id: 'database-cloud',
     category: 'Database & Cloud',
-    items: ['MySQL', 'SQLite', 'Render', 'Cloud Platforms', 'Git', 'GitHub', 'Linux'],
+    items: [
+      'MySQL',
+      'SQLite',
+      'Render',
+      'Cloud Platforms',
+      'Git',
+      'GitHub',
+      'Linux',
+    ],
   },
   {
     id: 'ai-ml',
     category: 'AI & Machine Learning',
-    items: ['Deep Learning', 'Neural Networks', 'ML Pipelines', 'TensorFlow', 'OpenCV', 'DeepFace'],
+    items: [
+      'Deep Learning',
+      'Neural Networks',
+      'ML Pipelines',
+      'TensorFlow',
+      'OpenCV',
+      'DeepFace',
+    ],
   },
   {
     id: 'security-devops',
     category: 'Security & DevOps',
-    items: ['Cybersecurity', 'Linux Security', 'Red Hat Administration', 'Networking'],
+    items: [
+      'Cybersecurity',
+      'Blockchain',
+      'Linux Security',
+      'Red Hat Administration',
+      'Networking',
+    ],
   },
 ]
 
@@ -100,35 +143,40 @@ export const certifications: Experience[] = [
     title: 'Google Cybersecurity Professional Certificate',
     role: 'Google Career Certificates',
     duration: '',
-    description: 'Threat analysis, incident response, and security principles.',
+    description:
+      'Threat analysis, incident response, and security principles.',
   },
   {
     id: 'redhat',
     title: 'Red Hat System Administration I (RH124)',
     role: 'Red Hat Training',
     duration: '',
-    description: 'Linux system administration, user management, enterprise infrastructure.',
+    description:
+      'Linux system administration, user management, enterprise infrastructure.',
   },
   {
     id: 'deloitte',
     title: 'Deloitte Australia - Cyber Job Simulation',
     role: 'Forage Job Simulation',
     duration: '',
-    description: 'Real-world cybersecurity consulting and vulnerability assessment.',
+    description:
+      'Real-world cybersecurity consulting and vulnerability assessment.',
   },
   {
     id: 'tata',
     title: 'Tata - GenAI Powered Data Analytics Job Simulation',
     role: 'Forage Job Simulation',
     duration: '',
-    description: 'AI-driven analytics, data insights, and modern workflows.',
+    description:
+      'AI-driven analytics, data insights, and modern workflows.',
   },
   {
     id: 'hackerrank',
     title: 'HackerRank Software Engineer Intern Certificate',
     role: 'HackerRank',
     duration: '',
-    description: 'Technical proficiency in coding and problem-solving.',
+    description:
+      'Technical proficiency in coding and problem-solving.',
   },
 ]
 
